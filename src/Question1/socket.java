@@ -9,7 +9,7 @@ import java.net.Socket;
 public class socket {
     public static void main(String[] args)  {
         try {
-            ServerSocket server_s = new ServerSocket(112);
+            ServerSocket server_s = new ServerSocket(007);
             
             System.out.println("wait for repsonse \n\n\n");
             Socket socket_s = server_s.accept();
