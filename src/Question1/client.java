@@ -1,14 +1,28 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Question1;
 
-/**
- *
- * @author Windows 10
- */
+import java.io.DataOutputStream;
+import java.net.Socket;
+
+
 public class client {
-    
+    public static void main(String[] args) {
+        try{
+            
+            Socket socket_s = new Socket("localhost", 007);
+            
+            DataOutputStream data_out = new DataOutputStream(socket_s.getOutputStream());
+            
+            data_out.writeUTF("Hello Ali Raza");
+            
+            data_out.flush();
+            data_out.close();
+            socket_s.close();
+            
+            
+        }
+        catch(Exception ex){
+            ex.printStackTrace();
+        }
+    }
 }
